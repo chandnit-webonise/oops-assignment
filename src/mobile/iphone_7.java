@@ -1,7 +1,7 @@
 package mobile;
 
 public class iphone_7 extends ios{
-	int memory,price,Ram;
+	int memorycard,price,Ram;
 	
 	public iphone_7()
 	{
@@ -12,7 +12,7 @@ public class iphone_7 extends ios{
 	{
 		super("yes","yes","yes",1);
 		setRam(ram);
-		setMem(mem);
+		setMemorycard(mem);
 		setPrice(price);
 	}
 
@@ -26,13 +26,13 @@ public class iphone_7 extends ios{
 	 return this.Ram;
 	}
 
-	public void setMem(int mem)
+	public void setMemorycard(int mem)
 	{
-		this.memory=mem;
+		this.memorycard=mem;
 	}
-	public int getMemory()
+	public int getMemorycard()
 	{
-	 return this.memory;
+	 return this.memorycard;
 	}
 	
 	public void setPrice(int price)

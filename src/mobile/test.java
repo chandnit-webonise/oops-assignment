@@ -6,19 +6,20 @@ public class test {
 public static void main(String args[])
 {
 	int ch;
-	String brand;
-	Mobile m=new Mobile("Yes","yes","Dual/Single");
-	Samsung s=new Samsung("yes","yes",32);
-	iphone_7 i=new iphone_7(32,32,15000);
-	Android a=new Android(true,true,1);
+	  Mobile m=new Mobile("Yes","yes","Dual/Single");
+	 Samsung s=new Samsung("yes","yes",32);
+	 iphone_Xs is=new iphone_Xs("black","yes",90000);
+	 iphone_7 i=new iphone_7(32,32,15000);
+	 Android a=new Android(true,true,1);
+	 MI mi=new MI("yes","3G/4G",32);
+	
 	Scanner sc=new Scanner(System.in);
 	do
 	{
-		System.out.println("1.Enter subbrand");
+		System.out.println("1.Enter iosbrand");
+		System.out.println("2.Enter Androidbrand");
 		System.out.println("3.Enter sms facility");
-		System.out.println("4.is there simtype");
-		System.out.println("5.Enter");
-		System.out.println("6.Enter your choice");
+		System.out.println("Enter your choice");
 		ch=sc.nextInt();
 		
 		switch(ch)
@@ -26,44 +27,44 @@ public static void main(String args[])
 		case 1:System.out.println("ios");
 		System.out.println("iphone XS");
 		System.out.println("Iphone_7"); 
-		 System.out.println("Enter subbrand\n");
+		 System.out.println("Enter ios brand\n");
 	      	m.setBrand(sc.next());
 	      	System.out.println("Enter price");
-		       i.setPrice(sc.nextInt());
-		       System.out.println("Enter RAM");
-		       i.setRam(sc.nextInt());
+		       is.setPrice(sc.nextInt());
+		       System.out.println(" RAM is");
+		       System.out.println("Ram:" + i.getRam());
+		       System.out.println("Enter simtype");
+				 System.out.println("simtype:" + m.getSType());
+				 System.out.println("Enter Type");
+				 m.setStype(sc.next());
+				
 		       	break;
 		       	
 		case 2:System.out.println("Android");
 			System.out.println("Samsung");
 				System.out.println("MI"); 
-				 System.out.println("Enter subbrand\n");
+				 System.out.println("Enter Androidbrand\n");
 			      	m.setBrand(sc.next());
 			      	System.out.println("Enter RAM");
 			      	s.setRam(sc.nextInt());
-			      	System.out.println("Enter ");
-			      	
+			      	System.out.println("Enter Networksupport");
+			      	mi.setNetworksupport(sc.next());
+			      	System.out.println("Enter simtype");
+					 System.out.println("simtype:" + m.getSType());
+					 System.out.println("Enter Type");
+					 m.setStype(sc.next());
+					  	
 			       	break;
 				
-		case 4:System.out.println("Is there SMS facility:" + m.getSms());
+		case 3:System.out.println("Is there SMS facility:" + m.getSms());
 		System.out.println("Enter Message");
 		m.setSms(sc.next());
+		break;
 		
-				break;
-		    
-		case 5:System.out.println("Enter simtype");
-		 System.out.println("simtype:" + m.getSType());
-		 System.out.println("Enter Type");
-		 m.setStype(sc.next());
-		
-		 
-		
-		 	break;
 		
 		 default:System.out.println("Wrong entry");
-		break;
 		}
-	}while(ch!=5);
+	}while(ch!=3);
 	
 	
 }
